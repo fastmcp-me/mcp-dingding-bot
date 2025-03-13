@@ -1,9 +1,15 @@
 {
   "name": "mcp-dingding-bot",
+  "description": "MCP Server for send text/markdown message via dingding (aka dingtalk) group custom robot api",
   "version": "1.0.0",
   "license": "MIT",
   "main": "index.js",
   "type": "module",
+  "author": "Yike Xiao <kmter@live.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Shawyeok/mcp-dingding-bot.git"
+  },
   "bin": {
     "mcp-dingding-bot": "./build/index.js"
   },

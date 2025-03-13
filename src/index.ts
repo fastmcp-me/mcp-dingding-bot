@@ -5,7 +5,7 @@ import { DingtalkBot } from "./dingtalk_custom_robot.js";
 // Create server instance
 const server = new McpServer({
   name: "dingding-bot",
-  version: "0.0.1",
+  version: "1.0.0",
   description: "A tool for sending messages to Dingding groups via a custom robot",
 });
 
