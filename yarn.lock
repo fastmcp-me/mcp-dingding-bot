@@ -32,6 +32,11 @@ accepts@^2.0.0:
     mime-types "^3.0.0"
     negotiator "^1.0.0"
 
+append-shebang@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.npmmirror.com/append-shebang/-/append-shebang-0.0.3.tgz#837b9b1b7515b79b5d52fe10102f4d12940e6fb0"
+  integrity sha512-HuukW4q3ZS+pyttTBtf4LMNXv2XVnxJNnHqxmqWcpVfPgAYvFiLjsgo0SuD64w2z4E5OSm/jXxH7MQcbK0FNxg==
+
 body-parser@^2.0.1:
   version "2.1.0"
   resolved "https://registry.npmmirror.com/body-parser/-/body-parser-2.1.0.tgz#2fd84396259e00fa75648835e2d95703bce8e890"
