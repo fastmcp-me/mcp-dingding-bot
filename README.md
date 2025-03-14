@@ -11,7 +11,7 @@ MCP Server for the DingDing Bot API, enabling DingDing / Dingtalk message notifi
 1. `send_text_message`
    * Send a plain text message to a dingding group
    * Inputs:
-     * `content` (string): Text content
+     * `text` (string): Text content
      * `atAll` (optional boolean): Whether to @ all members
 
 2. `send_markdown_message`
@@ -33,6 +33,32 @@ MCP Server for the DingDing Bot API, enabling DingDing / Dingtalk message notifi
 ### Usage with Claude Desktop
 Add the following to your `claude_desktop_config.json`:
 
+### Docker
+
+```json
+{
+  "mcpServers": {
+    "gitlab": {
+      "command": "docker",
+      "args": [
+        "run",
+        "--rm",
+        "-i",
+        "-e",
+        "DINGTALK_BOT_ACCESS_TOKEN",
+        "-e",
+        "DINGTALK_BOT_SECRET",
+        "shawyeok/mcp-dingding-bot"
+      ],
+      "env": {
+        "DINGTALK_BOT_ACCESS_TOKEN": "<YOUR_ACCESS_TOKEN>",
+        "DINGTALK_BOT_SECRET": "<YOUR_SECRET>" // Optional, for robots with signature verification enabled
+      }
+    }
+  }
+}
+```
+
 ### NPX
 
 ```json
@@ -53,10 +79,21 @@ Add the following to your `claude_desktop_config.json`:
 }
 ```
 
+## Build
+
+Docker build:
+```shell
+docker build -t shawyeok/mcp-dingding-bot .
+```
+
 ## Environment Variables
 
 - `DINGTALK_BOT_ACCESS_TOKEN`: Your dingding group robot access token (required)
 - `DINGTALK_BOT_SECRET`: Your dingding group robot signature secret (optional)
+
+## References
+- https://modelcontextprotocol.io/quickstart/server
+- https://open.dingtalk.com/document/robots/custom-robot-access
 
 ## License
 
