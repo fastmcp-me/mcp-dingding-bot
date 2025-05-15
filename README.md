@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/shawyeok-mcp-dingding-bot-badge.png)](https://mseep.ai/app/shawyeok-mcp-dingding-bot)
+
 # MCP DingDing Bot
 
 MCP Server for the DingDing Bot API, enabling DingDing / Dingtalk message notifications and interactions.
