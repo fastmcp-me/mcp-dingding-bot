@@ -46,9 +46,10 @@ server.tool(
     title: z.string().describe("The title of the message"),
     text: z.string().describe("The text content to send"),
     atAll: z.boolean().optional().describe("Whether to @all the users in the group"),
+    atMobiles: z.array(z.string()).optional().describe("The mobile numbers of the users to @"),
   },
-  async ({ title, text, atAll }) => {
-    const response = await dingtalkBot.sendMarkdown(title, text, [], atAll);
+  async ({ title, text, atAll, atMobiles }) => {
+    const response = await dingtalkBot.sendMarkdown(title, text, atMobiles, atAll);
     if (response.errcode !== 0) {
       return {
         content: [{ type: "text", text: `Failed to send message, code: ${response.errcode}, message: ${response.errmsg}` }],
